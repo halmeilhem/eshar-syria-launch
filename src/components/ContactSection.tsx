@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+
 import { Card } from "@/components/ui/card";
 
 const ContactSection = () => {
@@ -39,9 +39,6 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <Button variant="accent" size="lg" className="text-xl px-12 py-6">
-                أشعرني عند الإطلاق
-              </Button>
             </div>
           </Card>
         </div>
