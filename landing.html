@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إشعار - رسائل دعائية عبر الواتساب</title>
+    <meta name="description" content="لأول مرة في سوريا، رسائل دعائية عن طريق الوتساب" />
+    <meta name="author" content="إشعار" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Meta Tags -->
+    <meta property="og:title" content="إشعار - رسائل دعائية عبر الواتساب" />
+    <meta property="og:description" content="لأول مرة في سوريا، رسائل دعائية عن طريق الوتساب" />
+    <meta property="og:type" content="website" />
+    
+    <style>
+      /* Custom CSS Variables */
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 220 15% 20%;
+        --card: 0 0% 100%;
+        --card-foreground: 220 15% 20%;
+        --primary: 212 85% 45%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 25% 95%;
+        --secondary-foreground: 220 15% 25%;
+        --muted: 210 25% 96%;
+        --muted-foreground: 220 10% 55%;
+        --accent: 45 95% 55%;
+        --accent-foreground: 220 15% 25%;
+        --border: 210 20% 90%;
+        --radius: 0.75rem;
+        --brand-blue: 212 85% 45%;
+        --brand-blue-light: 212 65% 85%;
+        --brand-yellow: 45 95% 55%;
+        --brand-yellow-light: 45 85% 85%;
+        --shadow-brand: 0 10px 25px -5px hsl(212 85% 45% / 0.1);
+      }
+      
+      .font-cairo {
+        font-family: 'Cairo', sans-serif;
+      }
+      
+      .bg-gradient-hero {
+        background: linear-gradient(135deg, hsl(212 85% 45%) 0%, hsl(212 75% 55%) 100%);
+      }
+      
+      .bg-gradient-accent {
+        background: linear-gradient(90deg, hsl(45 95% 55%) 0%, hsl(45 85% 60%) 100%);
+      }
+      
+      .shadow-brand {
+        box-shadow: var(--shadow-brand);
+      }
+      
+      .text-foreground {
+        color: hsl(var(--foreground));
+      }
+      
+      .text-muted-foreground {
+        color: hsl(var(--muted-foreground));
+      }
+      
+      .text-primary {
+        color: hsl(var(--primary));
+      }
+      
+      .bg-card {
+        background-color: hsl(var(--card));
+      }
+      
+      .border-border {
+        border-color: hsl(var(--border));
+      }
+      
+      .bg-secondary\/20 {
+        background-color: hsl(var(--secondary) / 0.2);
+      }
+      
+      .text-brand-blue {
+        color: hsl(var(--brand-blue));
+      }
+      
+      .text-brand-yellow {
+        color: hsl(var(--brand-yellow));
+      }
+      
+      .hover\:shadow-brand:hover {
+        box-shadow: var(--shadow-brand);
+      }
+      
+      .hover\:-translate-y-2:hover {
+        transform: translateY(-0.5rem);
+      }
+      
+      .transition-all {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    </style>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              cairo: ['Cairo', 'sans-serif'],
+            },
+            colors: {
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              card: 'hsl(var(--card))',
+              'card-foreground': 'hsl(var(--card-foreground))',
+              primary: 'hsl(var(--primary))',
+              'primary-foreground': 'hsl(var(--primary-foreground))',
+              secondary: 'hsl(var(--secondary))',
+              'secondary-foreground': 'hsl(var(--secondary-foreground))',
+              muted: 'hsl(var(--muted))',
+              'muted-foreground': 'hsl(var(--muted-foreground))',
+              accent: 'hsl(var(--accent))',
+              'accent-foreground': 'hsl(var(--accent-foreground))',
+              border: 'hsl(var(--border))',
+              'brand-blue': 'hsl(var(--brand-blue))',
+              'brand-blue-light': 'hsl(var(--brand-blue-light))',
+              'brand-yellow': 'hsl(var(--brand-yellow))',
+              'brand-yellow-light': 'hsl(var(--brand-yellow-light))',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body class="bg-background text-foreground font-cairo">
+    <main class="min-h-screen">
+      <!-- Hero Section -->
+      <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-100 to-yellow-50 px-4">
+        <div class="container mx-auto max-w-4xl">
+          <div class="text-center space-y-8">
+            <!-- Brand Name -->
+            <div class="space-y-4">
+              <h1 class="text-6xl lg:text-8xl font-black text-transparent bg-gradient-hero bg-clip-text">
+                إشعار
+              </h1>
+              <div class="w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Main Message -->
+            <div class="space-y-6">
+              <h2 class="text-2xl lg:text-4xl font-bold text-foreground leading-relaxed">
+                لأول مرة في سوريا
+              </h2>
+              <p class="text-xl lg:text-2xl text-muted-foreground font-medium leading-relaxed">
+                رسائل دعائية عن طريق الواتساب
+              </p>
+            </div>
+
+            <!-- Coming Soon Message -->
+            <div class="bg-card border border-border rounded-2xl p-8 shadow-brand">
+              <p class="text-3xl lg:text-4xl font-bold text-primary mb-4">
+                ترقبونا
+              </p>
+              <p class="text-muted-foreground text-lg">
+                قريباً سنطلق خدمة التسويق الرقمي الأولى من نوعها
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-20 bg-secondary/20">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              لماذا التسويق عبر الواتساب؟
+            </h2>
+            <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+              اكتشف مزايا التسويق الحديث والفعال
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-card p-8 text-center hover:shadow-brand transition-all duration-300 transform hover:-translate-y-2 border border-border/50 rounded-lg">
+              <div class="text-4xl mb-4">💬</div>
+              <h3 class="text-xl font-bold text-foreground mb-4">
+                وصول مباشر
+              </h3>
+              <p class="text-muted-foreground leading-relaxed">
+                تواصل مع عملائك مباشرة عبر الواتساب
+              </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-card p-8 text-center hover:shadow-brand transition-all duration-300 transform hover:-translate-y-2 border border-border/50 rounded-lg">
+              <div class="text-4xl mb-4">📈</div>
+              <h3 class="text-xl font-bold text-foreground mb-4">
+                معدل فتح عالي
+              </h3>
+              <p class="text-muted-foreground leading-relaxed">
+                نسبة فتح تصل إلى 98% مقارنة بـ 20% للإيميل
+              </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-card p-8 text-center hover:shadow-brand transition-all duration-300 transform hover:-translate-y-2 border border-border/50 rounded-lg">
+              <div class="text-4xl mb-4">⚡</div>
+              <h3 class="text-xl font-bold text-foreground mb-4">
+                سهولة الاستخدام
+              </h3>
+              <p class="text-muted-foreground leading-relaxed">
+                واجهة بسيطة وسهلة للإدارة والمتابعة
+              </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-card p-8 text-center hover:shadow-brand transition-all duration-300 transform hover:-translate-y-2 border border-border/50 rounded-lg">
+              <div class="text-4xl mb-4">💰</div>
+              <h3 class="text-xl font-bold text-foreground mb-4">
+                تكلفة أقل
+              </h3>
+              <p class="text-muted-foreground leading-relaxed">
+                أوفر من الطرق التقليدية للتسويق
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="py-20 bg-gradient-to-t from-blue-50 to-white">
+        <div class="container mx-auto px-4 text-center">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl lg:text-5xl font-bold text-foreground mb-8">
+              ابق على تواصل معنا
+            </h2>
+            <p class="text-xl text-muted-foreground mb-12 leading-relaxed">
+              سجل بياناتك لتكون أول من يعلم بإطلاق الخدمة
+            </p>
+
+            <div class="bg-card p-8 lg:p-12 border border-border/50 shadow-brand rounded-lg">
+              <div class="space-y-8">
+                <div class="space-y-4">
+                  <h3 class="text-2xl font-bold text-primary">
+                    قريباً جداً
+                  </h3>
+                  <p class="text-muted-foreground text-lg">
+                    نعمل بجد لتقديم أفضل خدمة تسويق رقمي في سوريا
+                  </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <div class="flex items-center gap-2 text-muted-foreground">
+                    <span class="text-brand-blue">📱</span>
+                    <span>واتساب</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-muted-foreground">
+                    <span class="text-brand-yellow">⚡</span>
+                    <span>سريع</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-muted-foreground">
+                    <span class="text-primary">🇸🇾</span>
+                    <span>محلي</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
